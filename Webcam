@@ -1,0 +1,13 @@
+AIM : Operate the Phone Camera using Raspberry Pi
+Initially, the phone and Raspberry Pi should be connected to the same Wi-fi.
+Install IP WEBCAM app on your mobile phone. And start server in it.
+The following is the step-by-step procedure to connect the phone to Raspberry Pi
+Step 1: sudo apt-get install motion
+Step 2: sudo geany /etc/motion/motion.conf
+The above step opens motion.conf file.
+In motion.conf file,the following changes have been made: Set the value of daemon to ON and
+add a line: webcam_localhost ON below it.
+Step 3: sudo geany /etc/default/motion
+Initialize the variable start_motion_daemon to Yes
+Step 4: sudo service motion start
+In the browser,type the IP address displayed when the IP Webcam Server was Started. The phone camera is displayed on the IP Webcam Screen.
